@@ -16,7 +16,7 @@ import Branch
         fatalError("rootViewController cannot be casted to FlutterViewController")
     }
     
-    let eventChannel = FlutterEventChannel(name: "flutter_branch_io/event", binaryMessenger: controller)
+    let eventChannel = FlutterEventChannel(name: "flutter_branch_io/event", binaryMessenger: controller.binaryMessenger)
     
     eventChannel.setStreamHandler(self)
     
